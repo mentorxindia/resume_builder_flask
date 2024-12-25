@@ -1,0 +1,34 @@
+.banner {
+    background: linear-gradient(to bottom, rgba(52, 58, 64, 0.5), rgba(255, 97, 0, 0.4)),  url('/static/images/banner.png') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+}
+
+.features {
+    margin-top: 50px;
+    color: #451f0f;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #a15c3b;
+    transition: color 0.3s ease;
+}
+
+.feature-icon:hover {
+    color: #f68307;
+}
+

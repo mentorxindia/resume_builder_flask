@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/static/css/common.css">
+
+{% include 'common/navbar_top.html' %}
+{% include 'common/navbar_side.html' %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card p-4 shadow" style="max-width: 500px; width: 100%;">
+        <h4 class="text-center mb-4">Profile Details</h4>
+        <form id="profileForm" class="mt-3"> <!-- Added top margin using `mt-3` -->
+            <div class="form-group mb-3"> <!-- Added bottom margin using `mb-3` -->
+                <label for="userFullName">Full Name</label>
+                <input type="text" class="form-control" id="userFullName" placeholder="Full Name" disabled>
+            </div>
+            <div class="form-group mb-3"> <!-- Added bottom margin using `mb-3` -->
+                <label for="userEmail">Email Address</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="Email Address" disabled>
+            </div>
+            <div class="form-group mb-3"> <!-- Added bottom margin using `mb-3` -->
+                <label for="userPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="userPhone" placeholder="Phone Number" disabled>
+            </div>
+            <div class="form-group mb-4"> <!-- Added bottom margin using `mb-4` -->
+                <label for="userGender">Gender</label>
+                <select class="form-control" id="userGender" disabled>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" id="editProfileButton">Edit</button>
+                <button type="submit" class="btn btn-primary" id="saveProfileButton" style="display: none;">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% include 'common/footer.html' %}
+
+<script src="/static/js/userController.js"></script>

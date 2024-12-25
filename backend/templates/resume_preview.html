@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/static/css/resume.css">
+
+{% include 'common/navbar_top.html' %}
+{% include 'common/navbar_side.html' %}
+<div class="container mt-5">
+<div class="d-flex justify-content-end mt-3">
+    <div class="col-md-4 d-flex align-items-end">
+        <button id="downloadResumeBtn" class="btn btn-success">Download Resume</button>
+    </div>
+</div>
+
+<div id="resumePreview" class="mt-4">
+    <div id="resumeContent">
+        <!-- Preview of the resume based on the selected template will go here -->
+    </div>
+</div>
+</div>
+
+{% include 'common/footer.html' %}
+<script src="/static/js/resumePreviewController.js"></script>
+
