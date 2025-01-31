@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/static/css/common.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+
+
+{% include 'common/navbar_top.html' %}
+
+<div class="container">
+    <div class="dashboard-header text-center">
+        <h1>Welcome to Your User Dashboard</h1>
+        <p>Here you can manage your personal settings, view your profile, and more.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <i class="fas fa-user fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">View Profile</h5>
+                    <p>Update your personal details and manage your account settings.</p>
+                    <a href="/user/profile" class="btn btn-dashboard">Go to Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Account Settings</h5>
+                    <p>Modify your account preferences, password, and privacy settings.</p>
+                    <a href="/user/deactivate_account" class="btn btn-dashboard">Go to Settings</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Notifications</h5>
+                    <p>View and manage notifications related to your account and activities.</p>
+                    <a href="#" class="btn btn-dashboard">View Notifications</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Recent Activity</h5>
+            <p>No recent activities to display.</p>
+        </div>
+    </div>
+</div>
+
+{% include 'common/footer.html' %}

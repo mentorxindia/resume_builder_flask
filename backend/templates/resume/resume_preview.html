@@ -1,11 +1,10 @@
 <link rel="stylesheet" href="/static/css/resume.css">
 
 {% include 'common/navbar_top.html' %}
-{% include 'common/navbar_side.html' %}
 <div class="container mt-5">
 <div class="d-flex justify-content-end mt-3">
     <div class="col-md-4 d-flex align-items-end">
-        <button id="downloadResumeBtn" class="btn btn-success">Download Resume</button>
+        <button id="downloadResumeBtn" class="btn btn-theme">Download Resume</button>
     </div>
 </div>
 
@@ -17,5 +16,5 @@
 </div>
 
 {% include 'common/footer.html' %}
-<script src="/static/js/resumePreviewController.js"></script>
+<script type="module" src="/static/js/resume/resumePreviewController.js"></script>
 

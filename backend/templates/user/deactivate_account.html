@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/css/common.css">
+
+{% include 'common/navbar_top.html' %}
+{% include 'common/navbar_side.html' %}
+
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100 mt-5">
+    <div class="card p-4 shadow" style="max-width: 500px; width: 100%;">
+        <h4 class="text-center mb-4">Deactivate Account</h4>
+        <p class="text-center mb-4">
+            Your account is not permanently deleted but is temporarily disabled. You can reactivate it anytime by contacting support.
+        </p>
+        
+        <div class="d-flex justify-content-center">
+            <button id="deactivateButton" class="btn btn-danger">Deactivate Account</button>
+        </div>
+        
+    </div>
+</div>
+
+{% include 'common/footer.html' %}
+
+<script type="module" src="/static/js/user/deactivateAccountController.js"></script>

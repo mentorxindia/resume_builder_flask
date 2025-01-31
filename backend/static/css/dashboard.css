@@ -1,0 +1,48 @@
+.dashboard-header {
+    background-color:  #673b37;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.dashboard-header p {
+    font-size: 1.1rem;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.btn-dashboard {
+    background-color: #c8b1a0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-dashboard:hover {
+    background-color: #c8b1a0;
+}

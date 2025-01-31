@@ -1,4 +1,34 @@
-<!-- <div class="side-navbar" id="sideNavbar">
-    <a href="/dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-    <a href="/resume"><i class="fas fa-file-alt"></i>Resumes</a>
-</div> -->
+<link rel="stylesheet" href="/static/css/nav_side.css">
+
+<button class="sidebar-btn" id="sidebarCollapse">
+    <i class="fas fa-bars"></i> Toggle Sidebar
+</button>
+
+<div id="sidebar">
+    <div class="p-4 pt-5">
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <a href="/user/profile">
+                    <i class="fas fa-key mr-3"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="/user/change_password">
+                    <i class="fas fa-key mr-3"></i>
+                    Change Password
+                </a>
+            </li>
+            <li>
+                <a href="/user/deactivate_account">
+                    <i class="fas fa-trash-alt mr-3"></i>
+                    Deactivate Account
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="content" class="container-fluid flex-grow-1 p-4">
+    <!-- Main content goes here -->
+</div>

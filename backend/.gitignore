@@ -1,3 +1,6 @@
+!static/static/uploads/
+uploads/default_profile.jpeg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/static/css/resume.css">
 
 {% include 'common/navbar_top.html' %}
-{% include 'common/navbar_side.html' %}
 
 <div class="container mt-5">
     <h4 class="text-center"></h4>
@@ -198,12 +197,10 @@
                     <div class="col-md-4">
                         <label for="templateSelect" class="form-label">Select Resume Template</label>
                         <select class="form-select" id="themeName" name="themeName">
-                            <option value="basic">Basic</option>
-                            <option value="premium">Premium</option>
-                            <option value="pro">Pro</option>
+                            <!-- Options will be inserted here by JS -->
                         </select>
                     </div>
-
+                
                     <div class="col-md-4">
                         <label for="themeColorSelect" class="form-label">Select Theme Color</label>
                         <select class="form-select" id="themeColor" name="themeColor">
@@ -249,6 +246,34 @@
 
 
 {% include 'common/footer.html' %}
-<script src="/static/js/resumeDetailController.js"></script>
-<script src="/static/js/resumePreviewController.js"></script>
+<script type="module" src="/static/js/resume/resumeDetailController.js"></script>
+<script type="module" src="/static/js/resume/resumePreviewController.js"></script>
+<script>
+    function goToNextTab(tabId) {
+        var myTab = new bootstrap.Tab(document.getElementById(tabId + '-tab'));
+        myTab.show();
+    }
 
+    function goToPreviousTab(tabId) {
+        var myTab = new bootstrap.Tab(document.getElementById(tabId + '-tab'));
+        myTab.show();
+    }
+
+    function populateThemeOptions(){
+        const selectElement = document.getElementById('themeName');
+        for (let i = 1; i <= 10; i++) {
+            const option = document.createElement('option');
+            option.value = `${i}`;
+            option.textContent = `Template ${i}`;
+            
+            if (i === 1) {
+                option.selected = true;
+            }
+            
+            selectElement.appendChild(option);
+        }
+    }
+
+    populateThemeOptions();
+   
+</script>

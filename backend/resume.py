@@ -75,12 +75,12 @@ def get_resume_by_id_and_user_id(resume_id):
 
 @resume_bp.route('/template/<int:resume_id>/<theme_name>', methods=['GET'])
 @jwt_required()
-def get_resume_template(resume_id, theme_name):
+def get_resume_preview_with_input_theme(resume_id, theme_name):
     user_id = get_jwt_identity()
     resumes = get_resume_data(user_id, resume_id)
     if len(resumes) == 0:
         return jsonify({"error": "Resume not found or access denied"}), 404
-    return render_template(f"resume_themes/{theme_name}.html", **resumes[0])
+    return jsonify({"resume": render_template(f"resume/themes/{theme_name}.html", **resumes[0])})
 
 @resume_bp.route('/preview/<int:resume_id>/', methods=['GET'])
 @jwt_required()
@@ -92,9 +92,9 @@ def get_resume_preview_of_stored_theme(resume_id):
     resume = resumes[0]
     if resume['resume_template']:
         resume_template = resume['resume_template']['theme_name']
-        return render_template(f"resume_themes/{resume_template}.html", **resume)
+        return jsonify({"resume": render_template(f"resume/themes/{resume_template}.html", **resume)})
     else:
-        return "Please click on edit button, fill resume details and select resume template"
+        return jsonify({"resume": "Please click on edit button, fill resume details to preview resume"})
 
 # Save a specific section for the current user
 @resume_bp.route('/<int:resume_id>/section/<section>', methods=['PUT'])

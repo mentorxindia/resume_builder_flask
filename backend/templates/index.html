@@ -78,9 +78,9 @@
             <div class="login-form">
                 <form id="loginForm">
                     <h2>Login</h2>
-                    <div id="loginError" style="color: red; display: none;"></div>
                     <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
                     <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                    <div id="loginError" class="alert alert-danger" style="display: none;"></div>
                     <button type="submit" class="btn btn-block btn-theme">Login</button>
                     <div class="text-center mt-3">
                         <a href="#" id="registerFormLink" >Register</a> | <a href="/forgot-password">Forgot Password?</a>
@@ -96,7 +96,6 @@
             <div class="login-form">
                 <form id="registerForm">
                     <h2>Register</h2>
-                    <div id="registerError" style="color: red; display: none;"></div>
                     <input type="text" class="form-control" id="registerName" placeholder="Full Name" required>
                     <input type="email" class="form-control" id="registerEmail" placeholder="Email" required>
                     <input type="tel" class="form-control" id="registerPhone" placeholder="Phone Number" required>
@@ -112,6 +111,7 @@
                         <input type="checkbox" class="form-check-input" id="registerTerms" required>
                         <label class="form-check-label" for="registerTerms">I agree to the <a href="#">terms and conditions</a></label>
                     </div><br>
+                    <div id="registerError" class="alert alert-danger" style="display: none;"></div>
                     <button type="submit" class="btn btn-block btn-theme">Register</button>
                     <div class="text-center mt-3">
                         <a href="#" id="loginFormLink" >Login</a> | <a href="/forgot-password">Forgot Password?</a>
@@ -181,8 +181,5 @@
     </section>
 
     {% include 'common/footer.html' %}
-
-    <script src="/static/js/authController.js"></script>
-
 </body>
 </html>
